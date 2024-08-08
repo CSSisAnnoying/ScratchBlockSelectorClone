@@ -4,22 +4,27 @@ type PropTypes = {
     defaultText: string;
 }
 
-function Input({defaultText }: PropTypes) {
+function Input({ defaultText }: PropTypes) {
     const [text, setText] = useState(defaultText);
     const input = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        input.current?.style.setProperty("width", `${text.length}ch`);
+    }, []);
 
     const onTextUpdated = (e) => {
         setText(e.target.value);
         e.target.style.setProperty("width", `${e.target.value.length}ch`);
     }
 
-    useEffect(() => {
-        if (!input.current) return;
-        input.current.style.setProperty("width", `${text.length}ch`);
-    }, [text]);
+    const onKeyDown = (e) => {
+        if (e.key === "Enter") {
+            e.target.blur();
+        }
+    }
 
     return (
-        <input ref={input} onFocus={() => input.current?.select()} value={text} onChange={(e) => onTextUpdated(e)} type={typeof(defaultText)} />
+        <input ref={input} onKeyDown={onKeyDown} onFocus={() => input.current?.select()} value={text} onChange={(e) => onTextUpdated(e)} type={typeof (defaultText)} />
     )
 }
 

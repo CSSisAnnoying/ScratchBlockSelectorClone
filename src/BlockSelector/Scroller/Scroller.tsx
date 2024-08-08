@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import Block from './Block/Block.tsx';
 import "./Block.css";
 import { MovementCategoryBlocks, VisualsCategoryBlocks } from './ScrollerBlockCategories/ScrollerBlockCategories.tsx';
 
