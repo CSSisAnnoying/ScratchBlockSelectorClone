@@ -1,0 +1,36 @@
+.block-selector {
+    width: 25%;
+    height: 100%;
+    background: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: row;
+    outline: solid 5px rgb(39, 39, 39);
+}
+
+.block-scroller {
+    width: 85%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    scrollbar-color: rgb(50, 50, 50) rgb(20, 20, 20);
+    user-select: none;
+}
+
+.block-scroller > * {
+    margin-left: 10px;
+}
+.block-scroller > .block {
+    padding: 4px;
+}
+
+.category-header {
+    font-size: 1.7rem;
+    color: rgb(171, 171, 171);
+}
+
+.block-scroller::scroll {
+    background: rgb(20, 20, 20);
+}

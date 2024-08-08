@@ -1,0 +1,17 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+import { changeCategory } from "../../Redux/CategorySlice.ts";
+import { categoryColors } from "../../Redux/CategoryInfo.ts";
+
+function Category({ Category }) {
+    const dispatch = useDispatch();
+
+    return (
+        <button onClick={() => dispatch(changeCategory(Category))} className="category">
+            <div style={categoryColors[Category]}></div>
+            <span>{Category}</span>
+        </button>
+    )
+}
+
+export default Category;

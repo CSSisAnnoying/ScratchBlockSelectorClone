@@ -1,0 +1,41 @@
+.block {
+    width: fit-content;
+    height: auto;
+    display: inline-flex;
+    gap: 5px;
+    background: blue;
+    padding: 2px;
+    cursor: grab;
+}
+.block:active {
+    cursor: grabbing;
+}
+
+.block.Normal {
+    border-radius: 5px;
+}
+.block.Reporter {
+    border-radius: calc(1px / 0);
+}
+
+.block > *:not(input) {
+    user-select: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.block > input {
+    height: 100%;
+    min-width: 25px;
+    color: black;
+    border-radius: calc(1px / 0);
+    text-align: center;
+    font-size: 0.7rem;
+    width: 25px;
+    transition: filter 200ms ease-out;
+    z-index: 99999999999999999999;
+}
+
+.block > input:focus {
+    filter: drop-shadow(black 2px 4px 6px);
+}
