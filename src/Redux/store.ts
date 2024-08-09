@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categoryReducer from "./CategorySlice.ts";
+import categoryReducer from "./Slices/CategorySlice.ts";
+import loadingReducer from "./Slices/LoadingSlice.ts";
 
 export const store = configureStore({
     reducer: {
         category: categoryReducer,
+        loading: loadingReducer
     },
 })
 

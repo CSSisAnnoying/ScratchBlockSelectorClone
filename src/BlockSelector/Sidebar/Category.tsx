@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeCategory } from "../../Redux/CategorySlice.ts";
+import { changeCategory } from "../../Redux/Slices/CategorySlice.ts";
 import { categoryColors } from "../../Redux/CategoryInfo.ts";
 
 function Category({ Category }) {

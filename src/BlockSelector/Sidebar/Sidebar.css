@@ -22,7 +22,7 @@
 
 .category:hover span,
 .category:focus-visible span {
-    color: yellow;
+    color: rgb(11, 147, 189);
 }
 
 .category:hover div,
