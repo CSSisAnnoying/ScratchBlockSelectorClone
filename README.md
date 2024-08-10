@@ -14,5 +14,5 @@
 
 I made this for no reason.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/153ab364-3bf8-43b6-8c20-c6ac882d30a6" />
+  <img src="https://github.com/user-attachments/assets/ace7b493-630e-454e-b98d-f849dc95095a" />
 </p>
