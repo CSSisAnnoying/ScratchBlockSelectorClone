@@ -11,7 +11,9 @@
 > 1. When typing a large amount of text in the input boxes, the blocks scroll off to the left.
 >
 > ~~2. When typing a large enough amount of letters (not numbers) in an input box, it leaves a lot of space on the left and right.~~ 
+>
 > **(the ch unit in css is based on the width of the number 0; the letter widths are different so it made it inconsistent. Font is now monospaced.)**
+>
 > 2. Focusing and bluring input boxes too quickly causes the text inside to appear selected for a moment and then for it to all deselect.
 
 I made this for no reason.
