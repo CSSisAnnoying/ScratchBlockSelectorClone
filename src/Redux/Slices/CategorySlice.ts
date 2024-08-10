@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { categories } from "../CategoryInfo.ts";
 
-interface CategoryState {
-    category: String;
+type CategoryState = {
+    category: string;
+    updatedByClick?: boolean;
 }
 
 const initialState: CategoryState = {
-    category: "Movement"
+    category: categories[0],
+    updatedByClick: false
 }
 
 const categorySlice = createSlice({
@@ -13,7 +16,9 @@ const categorySlice = createSlice({
     initialState,
     reducers: {
         changeCategory: (state, action) => {
-            state.category = action.payload
+            state.category = action.payload.category;
+            state.updatedByClick = action.payload.updatedByClick == null ? true : action.payload.updatedByClick;
+            console.log(action.payload.updatedByClick);
         }
     }
 })

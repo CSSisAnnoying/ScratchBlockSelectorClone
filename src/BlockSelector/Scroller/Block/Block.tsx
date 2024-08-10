@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./AutoResizingInput.tsx";
+import Input from "./Inputs/AutoResizingInput.tsx";
 import { categoryColors } from "../../../Redux/CategoryInfo.ts";
 
 type LabelContent = {
@@ -25,11 +25,12 @@ function Block({ BlockType, Category, Content, LowerMargin }: BlockProps) {
     return (
         <div className={`block ${BlockType} ${Category}`} style={Object.assign(LowerMargin === true ? {marginBottom: "20px"} : {}, categoryColors[Category])}>
             {
-                Content.map((item) => {
-                    if (item.type === "label") {
-                        return <p key={item.content}>{item.content}</p>;
-                    } else {
-                        return <Input key={item.content} defaultText={item.content} />;
+                Content.map((item, index) => {
+                    switch (item.type) {
+                        case "label":
+                            return <p key={item.content + index}>{item.content}</p>;
+                        case "input":
+                            return <Input key={item.content + index} defaultText={item.content} />;
                     }
                 })
             }

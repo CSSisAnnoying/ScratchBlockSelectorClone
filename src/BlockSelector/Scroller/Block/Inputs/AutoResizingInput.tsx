@@ -9,12 +9,12 @@ function Input({ defaultText }: PropTypes) {
     const input = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        input.current?.style.setProperty("width", `${text.length}ch`);
+        input.current?.style.setProperty("width", `${text.length + 2}ch`);
     }, []);
 
     const onTextUpdated = (e) => {
         setText(e.target.value);
-        e.target.style.setProperty("width", `${e.target.value.length}ch`);
+        e.target.style.setProperty("width", `${e.target.value.length + 2}ch`);
     }
 
     const onKeyDown = (e) => {

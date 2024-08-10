@@ -12,8 +12,6 @@ function BlockSelector() {
         if (!isHeldDown) return;
         if (!scrollerElement.current) return;
 
-        // scrollerElement.current.scrollTop += e.movementY;
-        // console.log(scrollerElement.current.scrollTop, e.movementY);
         scrollerElement.current.scrollTop += e.movementY;
     }
 

@@ -7,7 +7,7 @@ function Category({ Category }) {
     const dispatch = useDispatch();
 
     return (
-        <button onClick={() => dispatch(changeCategory(Category))} className="category">
+        <button onClick={() => dispatch(changeCategory({category: Category}))} className="category">
             <div style={categoryColors[Category]}></div>
             <span>{Category}</span>
         </button>
